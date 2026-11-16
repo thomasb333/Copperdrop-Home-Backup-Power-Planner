@@ -1,0 +1,976 @@
+{
+  "name": "Demo home, 200 A (every feature)",
+  "version": "3.0.0",
+  "notes": "Fictional demo house with every kind of source: utility, a natural gas standby generator on an ATS, a dual fuel portable on an interlock, a diesel pickup with a 12 V inverter, a BLUETTI AC200L solar generator with two 200 W panels, roof solar, and a disabled home battery to toggle. One circuit is overloaded on purpose. Replace it with your own house from Configs.",
+  "library": [
+    {
+      "n": "Aquarium heater + pump (demo custom)",
+      "c": "Custom",
+      "w": 180,
+      "s": 180,
+      "v": 120,
+      "h": 12,
+      "p": "Always"
+    }
+  ],
+  "photo": null,
+  "scenario": {
+    "level": 2,
+    "shed": [],
+    "gridDown": true,
+    "solarPower": false,
+    "days": 3,
+    "contFactor": 0.8,
+    "headroom": 1.25,
+    "sunHours": 4.8,
+    "derate": 0.8,
+    "motors": 1,
+    "weather": 1,
+    "genStart": 0.3,
+    "genStop": 0.9,
+    "vehStart": 9,
+    "basis": "demand"
+  },
+  "panel": {
+    "name": "Main Panel",
+    "mainAmps": 200,
+    "busAmps": 200,
+    "spaces": 40
+  },
+  "breakers": [
+    {
+      "type": "GFCI",
+      "awg": "12",
+      "notes": "",
+      "loads": [
+        {
+          "id": "Lbjzrof",
+          "cat": "Kitchen",
+          "qty": 1,
+          "watts": 1200,
+          "surge": 1200,
+          "hours": 0.25,
+          "profile": "Morning + Evening",
+          "notes": "",
+          "name": "Microwave"
+        },
+        {
+          "id": "Ldh6gg7",
+          "cat": "Kitchen",
+          "qty": 1,
+          "watts": 1000,
+          "surge": 1000,
+          "hours": 0.3,
+          "profile": "Morning + Evening",
+          "notes": "",
+          "name": "Coffee maker"
+        }
+      ],
+      "id": "CB01",
+      "slot": 1,
+      "poles": 1,
+      "amps": 20,
+      "label": "Kitchen counter A",
+      "tier": 3
+    },
+    {
+      "type": "GFCI",
+      "awg": "12",
+      "notes": "",
+      "loads": [
+        {
+          "id": "L0of615",
+          "cat": "Kitchen",
+          "qty": 1,
+          "watts": 1100,
+          "surge": 1100,
+          "hours": 0.1,
+          "profile": "Morning + Evening",
+          "notes": "",
+          "name": "Toaster"
+        },
+        {
+          "id": "Lee0c93",
+          "cat": "Kitchen",
+          "qty": 1,
+          "watts": 800,
+          "surge": 800,
+          "hours": 0.5,
+          "profile": "Morning + Evening",
+          "notes": "",
+          "name": "Countertop appliance (general)"
+        }
+      ],
+      "id": "CB02",
+      "slot": 2,
+      "poles": 1,
+      "amps": 20,
+      "label": "Kitchen counter B",
+      "tier": 0
+    },
+    {
+      "type": "Standard",
+      "awg": "12",
+      "notes": "Plugs into the solar generator while the generator is off.",
+      "loads": [
+        {
+          "id": "L6cdo3x",
+          "cat": "Kitchen",
+          "qty": 1,
+          "watts": 250,
+          "surge": 1500,
+          "hours": 9,
+          "profile": "Cycling",
+          "notes": "",
+          "name": "Refrigerator, French door"
+        }
+      ],
+      "id": "CB03",
+      "slot": 3,
+      "poles": 1,
+      "amps": 20,
+      "label": "Refrigerator",
+      "tier": 1
+    },
+    {
+      "type": "Standard",
+      "awg": "12",
+      "notes": "",
+      "loads": [
+        {
+          "id": "Llks774",
+          "cat": "Kitchen",
+          "qty": 1,
+          "watts": 1500,
+          "surge": 1500,
+          "hours": 1,
+          "profile": "Evening",
+          "notes": "",
+          "name": "Dishwasher"
+        }
+      ],
+      "id": "CB04",
+      "slot": 4,
+      "poles": 1,
+      "amps": 20,
+      "label": "Dishwasher",
+      "tier": 0
+    },
+    {
+      "type": "Standard",
+      "awg": "6",
+      "notes": "",
+      "loads": [
+        {
+          "id": "Lbofoik",
+          "cat": "Kitchen",
+          "qty": 1,
+          "watts": 3000,
+          "surge": 3000,
+          "hours": 1,
+          "profile": "Morning + Evening",
+          "notes": "",
+          "name": "Electric range / oven"
+        }
+      ],
+      "id": "CB05",
+      "slot": 5,
+      "poles": 2,
+      "amps": 50,
+      "label": "Range / oven",
+      "tier": 0
+    },
+    {
+      "type": "AFCI",
+      "awg": "14",
+      "notes": "",
+      "loads": [
+        {
+          "id": "L2ib8is",
+          "cat": "Lighting & Living",
+          "qty": 1,
+          "watts": 150,
+          "surge": 150,
+          "hours": 5,
+          "profile": "Evening",
+          "notes": "",
+          "name": "Television"
+        },
+        {
+          "id": "Lfny562",
+          "cat": "Lighting & Living",
+          "qty": 2,
+          "watts": 60,
+          "surge": 60,
+          "hours": 6,
+          "profile": "Evening",
+          "notes": "",
+          "name": "LED lighting (room)"
+        },
+        {
+          "id": "Lcgzg4a",
+          "cat": "Custom",
+          "qty": 1,
+          "watts": 180,
+          "surge": 180,
+          "hours": 12,
+          "profile": "Always",
+          "notes": "",
+          "name": "Aquarium heater + pump (demo custom)"
+        }
+      ],
+      "id": "CB06",
+      "slot": 6,
+      "poles": 1,
+      "amps": 15,
+      "label": "Living room",
+      "tier": 3
+    },
+    {
+      "type": "AFCI",
+      "awg": "14",
+      "notes": "",
+      "loads": [
+        {
+          "id": "Llyc74w",
+          "cat": "Lighting & Living",
+          "qty": 1,
+          "watts": 60,
+          "surge": 60,
+          "hours": 6,
+          "profile": "Evening",
+          "notes": "",
+          "name": "LED lighting (room)"
+        },
+        {
+          "id": "L2xoyln",
+          "cat": "Lighting & Living",
+          "qty": 1,
+          "watts": 75,
+          "surge": 120,
+          "hours": 8,
+          "profile": "Night",
+          "notes": "",
+          "name": "Ceiling fan"
+        },
+        {
+          "id": "L32om7u",
+          "cat": "Medical",
+          "qty": 1,
+          "watts": 60,
+          "surge": 60,
+          "hours": 8,
+          "profile": "Night",
+          "notes": "",
+          "name": "CPAP"
+        }
+      ],
+      "id": "CB08",
+      "slot": 8,
+      "poles": 1,
+      "amps": 15,
+      "label": "Primary bedroom",
+      "tier": 1
+    },
+    {
+      "type": "Standard",
+      "awg": "10",
+      "notes": "",
+      "loads": [
+        {
+          "id": "Ljrr51g",
+          "cat": "Water",
+          "qty": 1,
+          "watts": 4500,
+          "surge": 4500,
+          "hours": 3,
+          "profile": "Water heating",
+          "notes": "",
+          "name": "Electric water heater, 50 gal"
+        }
+      ],
+      "id": "CB09",
+      "slot": 9,
+      "poles": 2,
+      "amps": 30,
+      "label": "Water heater",
+      "tier": 0
+    },
+    {
+      "type": "AFCI",
+      "awg": "14",
+      "notes": "",
+      "loads": [
+        {
+          "id": "Lljnru0",
+          "cat": "Lighting & Living",
+          "qty": 2,
+          "watts": 60,
+          "surge": 60,
+          "hours": 6,
+          "profile": "Evening",
+          "notes": "",
+          "name": "LED lighting (room)"
+        },
+        {
+          "id": "Lsuh7t6",
+          "cat": "Office & Comms",
+          "qty": 2,
+          "watts": 65,
+          "surge": 65,
+          "hours": 8,
+          "profile": "Office hours",
+          "notes": "",
+          "name": "Laptop"
+        }
+      ],
+      "id": "CB10",
+      "slot": 10,
+      "poles": 1,
+      "amps": 15,
+      "label": "Bedrooms 2 + 3",
+      "tier": 3
+    },
+    {
+      "type": "AFCI",
+      "awg": "12",
+      "notes": "",
+      "loads": [
+        {
+          "id": "Lm8vyug",
+          "cat": "Office & Comms",
+          "qty": 1,
+          "watts": 300,
+          "surge": 300,
+          "hours": 8,
+          "profile": "Office hours",
+          "notes": "",
+          "name": "Desktop PC + monitor"
+        },
+        {
+          "id": "Li6qfzk",
+          "cat": "Office & Comms",
+          "qty": 1,
+          "watts": 25,
+          "surge": 25,
+          "hours": 24,
+          "profile": "Always",
+          "notes": "",
+          "name": "Wi-Fi router + modem"
+        },
+        {
+          "id": "L251wq4",
+          "cat": "Office & Comms",
+          "qty": 1,
+          "watts": 75,
+          "surge": 100,
+          "hours": 24,
+          "profile": "Always",
+          "notes": "",
+          "name": "Starlink Standard"
+        }
+      ],
+      "id": "CB12",
+      "slot": 12,
+      "poles": 1,
+      "amps": 20,
+      "label": "Office + network",
+      "tier": 1
+    },
+    {
+      "type": "Standard",
+      "awg": "10",
+      "notes": "",
+      "loads": [
+        {
+          "id": "Lbq5w73",
+          "cat": "Laundry",
+          "qty": 1,
+          "watts": 5000,
+          "surge": 5000,
+          "hours": 1,
+          "profile": "Daytime",
+          "notes": "",
+          "name": "Electric dryer"
+        }
+      ],
+      "id": "CB13",
+      "slot": 13,
+      "poles": 2,
+      "amps": 30,
+      "label": "Dryer",
+      "tier": 0
+    },
+    {
+      "type": "Standard",
+      "awg": "12",
+      "notes": "",
+      "loads": [
+        {
+          "id": "Lrat8t2",
+          "cat": "Laundry",
+          "qty": 1,
+          "watts": 500,
+          "surge": 1200,
+          "hours": 1,
+          "profile": "Daytime",
+          "notes": "",
+          "name": "Washer"
+        }
+      ],
+      "id": "CB14",
+      "slot": 14,
+      "poles": 1,
+      "amps": 20,
+      "label": "Laundry",
+      "tier": 3
+    },
+    {
+      "type": "GFCI",
+      "awg": "12",
+      "notes": "",
+      "loads": [
+        {
+          "id": "Lvjduir",
+          "cat": "Lighting & Living",
+          "qty": 1,
+          "watts": 1500,
+          "surge": 1500,
+          "hours": 0.2,
+          "profile": "Morning + Evening",
+          "notes": "",
+          "name": "Hair dryer"
+        }
+      ],
+      "id": "CB16",
+      "slot": 16,
+      "poles": 1,
+      "amps": 20,
+      "label": "Bathrooms",
+      "tier": 0
+    },
+    {
+      "type": "Standard",
+      "awg": "8",
+      "notes": "",
+      "loads": [
+        {
+          "id": "L3myrbj",
+          "cat": "HVAC",
+          "qty": 1,
+          "watts": 3500,
+          "surge": 10000,
+          "hours": 8,
+          "profile": "HVAC",
+          "notes": "",
+          "name": "Heat pump / central AC, 3 ton"
+        }
+      ],
+      "id": "CB17",
+      "slot": 17,
+      "poles": 2,
+      "amps": 40,
+      "label": "Heat pump condenser",
+      "tier": 2
+    },
+    {
+      "type": "GFCI",
+      "awg": "12",
+      "notes": "",
+      "loads": [
+        {
+          "id": "Lpiwven",
+          "cat": "Kitchen",
+          "qty": 1,
+          "watts": 100,
+          "surge": 800,
+          "hours": 8,
+          "profile": "Cycling",
+          "notes": "",
+          "name": "Chest freezer"
+        },
+        {
+          "id": "L6p3mcp",
+          "cat": "Garage & Outdoor",
+          "qty": 1,
+          "watts": 550,
+          "surge": 1100,
+          "hours": 0.1,
+          "profile": "Morning + Evening",
+          "notes": "",
+          "name": "Garage door opener"
+        }
+      ],
+      "id": "CB18",
+      "slot": 18,
+      "poles": 1,
+      "amps": 20,
+      "label": "Garage freezer",
+      "tier": 1
+    },
+    {
+      "type": "GFCI",
+      "awg": "12",
+      "notes": "",
+      "loads": [],
+      "id": "CB20",
+      "slot": 20,
+      "poles": 1,
+      "amps": 20,
+      "label": "Exterior receptacles",
+      "tier": 0
+    },
+    {
+      "type": "Standard",
+      "awg": "10",
+      "notes": "",
+      "loads": [
+        {
+          "id": "Lgfivvl",
+          "cat": "HVAC",
+          "qty": 1,
+          "watts": 700,
+          "surge": 1400,
+          "hours": 8,
+          "profile": "HVAC",
+          "notes": "",
+          "name": "Air handler blower"
+        }
+      ],
+      "id": "CB21",
+      "slot": 21,
+      "poles": 2,
+      "amps": 30,
+      "label": "Air handler",
+      "tier": 2
+    },
+    {
+      "type": "Standard",
+      "awg": "12",
+      "notes": "",
+      "loads": [
+        {
+          "id": "Ll96jle",
+          "cat": "Water",
+          "qty": 1,
+          "watts": 1500,
+          "surge": 4500,
+          "hours": 1,
+          "profile": "Morning + Evening",
+          "notes": "",
+          "name": "Well pump, 1 HP"
+        }
+      ],
+      "id": "CB22",
+      "slot": 22,
+      "poles": 2,
+      "amps": 20,
+      "label": "Well pump",
+      "tier": 1
+    },
+    {
+      "type": "Standard",
+      "awg": "14",
+      "notes": "",
+      "loads": [
+        {
+          "id": "Lbcmkaa",
+          "cat": "Office & Comms",
+          "qty": 1,
+          "watts": 60,
+          "surge": 60,
+          "hours": 24,
+          "profile": "Always",
+          "notes": "",
+          "name": "Security cameras + NVR"
+        },
+        {
+          "id": "L6zdtwx",
+          "cat": "Office & Comms",
+          "qty": 1,
+          "watts": 150,
+          "surge": 150,
+          "hours": 4,
+          "profile": "Evening",
+          "notes": "",
+          "name": "Radio base station (GMRS/HF) + PSU"
+        }
+      ],
+      "id": "CB26",
+      "slot": 26,
+      "poles": 1,
+      "amps": 15,
+      "label": "Security + comms",
+      "tier": 2
+    },
+    {
+      "type": "Standard",
+      "awg": "14",
+      "notes": "",
+      "loads": [
+        {
+          "id": "Lpgwd4h",
+          "cat": "Lighting & Living",
+          "qty": 3,
+          "watts": 60,
+          "surge": 60,
+          "hours": 6,
+          "profile": "Evening",
+          "notes": "",
+          "name": "LED lighting (room)"
+        }
+      ],
+      "id": "CB30",
+      "slot": 30,
+      "poles": 1,
+      "amps": 15,
+      "label": "Lighting, common areas",
+      "tier": 2
+    },
+    {
+      "type": "Standard",
+      "awg": "8",
+      "notes": "",
+      "loads": [
+        {
+          "id": "Lt6o6p1",
+          "cat": "EV",
+          "qty": 1,
+          "watts": 7700,
+          "surge": 7700,
+          "hours": 3,
+          "profile": "Night",
+          "notes": "",
+          "name": "EV charger, Level 2 32 A"
+        }
+      ],
+      "id": "CB27",
+      "slot": 27,
+      "poles": 2,
+      "amps": 40,
+      "label": "EV charger",
+      "tier": 0
+    },
+    {
+      "type": "Standard",
+      "awg": "14",
+      "notes": "Deliberate demo problem: two heaters on one 20 A circuit with 14 AWG wire. See the red breaker and the code check.",
+      "loads": [
+        {
+          "id": "Lvzxg1c",
+          "cat": "Heating",
+          "qty": 2,
+          "watts": 1500,
+          "surge": 1500,
+          "hours": 4,
+          "profile": "Night",
+          "notes": "",
+          "name": "Space heater"
+        }
+      ],
+      "id": "CB28",
+      "slot": 28,
+      "poles": 1,
+      "amps": 20,
+      "label": "Overloaded shop circuit",
+      "tier": 0
+    }
+  ],
+  "sources": [
+    {
+      "type": "utility",
+      "name": "Utility service, 200 A",
+      "ratedW": 48000,
+      "surgeW": 0,
+      "kWh": 0,
+      "dod": 0.9,
+      "eff": 0.9,
+      "pvKw": 0,
+      "sunHours": 4.8,
+      "derate": 0.8,
+      "fuel": "",
+      "galHr": 0,
+      "fuelGal": 0,
+      "outV": "120/240",
+      "altA": 0,
+      "runH": 0,
+      "chargeW": 0,
+      "acInW": 0,
+      "solarInW": 0,
+      "transfer": "Service Disconnect",
+      "id": "Srob0js",
+      "enabled": true,
+      "notes": ""
+    },
+    {
+      "type": "standby",
+      "name": "Generac Guardian 22 kW (Next Gen 7260) on NG",
+      "ratedW": 21000,
+      "surgeW": 31500,
+      "kWh": 0,
+      "dod": 0.9,
+      "eff": 0.9,
+      "pvKw": 0,
+      "sunHours": 4.8,
+      "derate": 0.8,
+      "fuel": "Natural gas",
+      "galHr": 0,
+      "fuelGal": 0,
+      "outV": "120/240",
+      "altA": 0,
+      "runH": 0,
+      "chargeW": 0,
+      "acInW": 0,
+      "solarInW": 0,
+      "transfer": "ATS",
+      "id": "S047cr7",
+      "enabled": true,
+      "notes": "Whole-house standby on natural gas. Fails in the cascade when gas service stops.",
+      "brand": "Generac"
+    },
+    {
+      "type": "portable",
+      "name": "Champion 9500W Electric Start Dual Fuel Generator (201508)",
+      "ratedW": 9500,
+      "surgeW": 12000,
+      "kWh": 0,
+      "dod": 0.9,
+      "eff": 0.9,
+      "pvKw": 0,
+      "sunHours": 4.8,
+      "derate": 0.8,
+      "fuel": "Dual fuel",
+      "galHr": 0.96,
+      "fuelGal": 20,
+      "outV": "120/240",
+      "altA": 0,
+      "runH": 0,
+      "chargeW": 0,
+      "acInW": 0,
+      "solarInW": 0,
+      "transfer": "Interlock",
+      "id": "S4yew43",
+      "enabled": true,
+      "notes": "Backup to the standby. 20 gal gasoline on hand.",
+      "brand": "Champion"
+    },
+    {
+      "type": "vehicle",
+      "name": "Diesel pickup + 2000 W 12 V inverter",
+      "ratedW": 2000,
+      "surgeW": 4000,
+      "kWh": 0,
+      "dod": 0.9,
+      "eff": 0.9,
+      "pvKw": 0,
+      "sunHours": 4.8,
+      "derate": 0.8,
+      "fuel": "Diesel",
+      "galHr": 0.8,
+      "fuelGal": 20,
+      "outV": "120",
+      "altA": 110,
+      "runH": 4,
+      "chargeW": 0,
+      "acInW": 0,
+      "solarInW": 0,
+      "transfer": "Charges battery",
+      "id": "Sn6emau",
+      "enabled": true,
+      "notes": "Charges the solar generator while idling. Preset: Cummins 6.7 I6, high idle.",
+      "vehProfile": "Diesel pickup, Cummins 6.7 I6 (high idle)"
+    },
+    {
+      "type": "battery",
+      "name": "BLUETTI AC200L",
+      "ratedW": 2400,
+      "surgeW": 7200,
+      "kWh": 2.048,
+      "dod": 0.9,
+      "eff": 0.9,
+      "pvKw": 0,
+      "sunHours": 4.8,
+      "derate": 0.8,
+      "fuel": "",
+      "galHr": 0,
+      "fuelGal": 0,
+      "outV": "120",
+      "altA": 0,
+      "runH": 0,
+      "chargeW": 3600,
+      "acInW": 2400,
+      "solarInW": 1200,
+      "transfer": "Plug-in loads only",
+      "id": "Sl3vfi0",
+      "enabled": true,
+      "notes": "Solar generator. Runs the fridge, freezer, router and CPAP by extension cord while the generator is off.",
+      "brand": "BLUETTI"
+    },
+    {
+      "type": "solar",
+      "name": "BLUETTI 200W Portable Solar Panel (SP200L)",
+      "ratedW": 0,
+      "surgeW": 0,
+      "kWh": 0,
+      "dod": 0.9,
+      "eff": 0.9,
+      "pvKw": 0.2,
+      "sunHours": 4.8,
+      "derate": 0.8,
+      "fuel": "",
+      "galHr": 0,
+      "fuelGal": 0,
+      "outV": "120/240",
+      "altA": 0,
+      "runH": 0,
+      "chargeW": 0,
+      "acInW": 0,
+      "solarInW": 0,
+      "transfer": "Charge Controller",
+      "id": "Sesctf1",
+      "enabled": true,
+      "notes": "",
+      "brand": "BLUETTI"
+    },
+    {
+      "type": "solar",
+      "name": "BLUETTI 200W Portable Solar Panel (SP200L)",
+      "ratedW": 0,
+      "surgeW": 0,
+      "kWh": 0,
+      "dod": 0.9,
+      "eff": 0.9,
+      "pvKw": 0.2,
+      "sunHours": 4.8,
+      "derate": 0.8,
+      "fuel": "",
+      "galHr": 0,
+      "fuelGal": 0,
+      "outV": "120/240",
+      "altA": 0,
+      "runH": 0,
+      "chargeW": 0,
+      "acInW": 0,
+      "solarInW": 0,
+      "transfer": "Charge Controller",
+      "id": "Sq2izng",
+      "enabled": true,
+      "notes": "",
+      "brand": "BLUETTI"
+    },
+    {
+      "type": "solar",
+      "name": "Roof array, 6 kW",
+      "ratedW": 0,
+      "surgeW": 0,
+      "kWh": 0,
+      "dod": 0.9,
+      "eff": 0.9,
+      "pvKw": 6,
+      "sunHours": 4.8,
+      "derate": 0.8,
+      "fuel": "",
+      "galHr": 0,
+      "fuelGal": 0,
+      "outV": "120/240",
+      "altA": 0,
+      "runH": 0,
+      "chargeW": 0,
+      "acInW": 0,
+      "solarInW": 0,
+      "transfer": "Grid-tie",
+      "id": "S6nhkit",
+      "enabled": true,
+      "notes": ""
+    },
+    {
+      "type": "battery",
+      "name": "Tesla Powerwall 3",
+      "ratedW": 11500,
+      "surgeW": 11500,
+      "kWh": 13.5,
+      "dod": 0.9,
+      "eff": 0.9,
+      "pvKw": 0,
+      "sunHours": 4.8,
+      "derate": 0.8,
+      "fuel": "",
+      "galHr": 0,
+      "fuelGal": 0,
+      "outV": "120/240",
+      "altA": 0,
+      "runH": 0,
+      "chargeW": 25000,
+      "acInW": 5000,
+      "solarInW": 20000,
+      "transfer": "Gateway",
+      "id": "Sk3aly5",
+      "enabled": false,
+      "notes": "Disabled. Turn it on to compare the plan with a home battery.",
+      "brand": "Tesla"
+    }
+  ],
+  "recharge": {
+    "bat": "Sl3vfi0",
+    "panels": [
+      "Sesctf1",
+      "Sq2izng"
+    ],
+    "exp": true,
+    "start": 0.2,
+    "target": 1,
+    "sun": 4.8,
+    "derate": 0.75,
+    "loadW": 0
+  },
+  "runplan": {
+    "stage": "",
+    "moveToCharge": false,
+    "panelsReach": true,
+    "replugHouse": true,
+    "outdoorMax": 92,
+    "outdoorMin": 40,
+    "mode": "auto",
+    "gen": "",
+    "station": "Sl3vfi0",
+    "stationLoads": null,
+    "days": 5,
+    "quietStart": 21,
+    "quietEnd": 7,
+    "minRun": 2,
+    "maxRuns": 4,
+    "fridgeGap": 4,
+    "freezerGap": 24,
+    "climate": "summer",
+    "maxIndoor": 82,
+    "minIndoor": 58,
+    "startIndoor": 75,
+    "setCool": 73,
+    "setHeat": 68,
+    "rise": 1.2,
+    "riseNight": 0.4,
+    "coolRate": 3,
+    "heatRate": 3,
+    "loss": 0.5,
+    "lossNight": 1,
+    "weather": 1,
+    "manual": "7-9, 13-15, 18-20",
+    "ngCfKwh": 13.5,
+    "oilHrs": 24
+  },
+  "supplies": {
+    "stageDays": {
+      "standby": 3,
+      "portable": 2,
+      "vehicle": 1,
+      "solar": 1
+    },
+    "dualFuel": "Gasoline",
+    "prices": {
+      "ng": 1.5,
+      "gas": 3,
+      "diesel": 3.6,
+      "lp": 2.8
+    }
+  }
+}

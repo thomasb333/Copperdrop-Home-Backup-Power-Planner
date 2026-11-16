@@ -1,0 +1,19 @@
+Copperdrop Panel Planner
+Copyright (c) 2026 Copperdrop Cognitive, LLC. All rights reserved.
+
+Permission is granted, free of charge, to any person to download, use, and
+share unmodified copies of this software for personal, non-commercial
+purposes, including planning power for their own home and family.
+
+Modifying, redistributing modified versions, selling, or including this
+software in a commercial product or service requires written permission from
+Copperdrop Cognitive, LLC.
+
+Third-party libraries loaded at runtime (ExcelJS, PptxGenJS) remain under
+their own licenses.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED. IT IS A PLANNING AID ONLY AND IS NOT A SUBSTITUTE FOR A LICENSED
+ELECTRICIAN, A PERMIT, OR AN NEC LOAD CALCULATION. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY ARISING FROM THE USE OF THE SOFTWARE.
